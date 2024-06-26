@@ -10,11 +10,11 @@ const urlHomepage = "https://rickandmortyapi.com/api/character/?page="
 let page = 1
 
 const characterList = document.getElementById("character-list")
-const prevButton = document.getElementById("prevPage")
-const nextButton = document.getElementById("nextPage")
+const prevButton = document.getElementById("prev-page")
+const nextButton = document.getElementById("next-page")
 
 const getCharacters = () => {
-    //characterList.innerHTML = ""
+    characterList.innerHTML = ""
     fetch(`${urlHomepage}${page}`)
     .then(response => response.json())
     .then((data) => {
@@ -33,7 +33,7 @@ const getCharacters = () => {
     })   
 } 
 
-/*
+
 prevButton.addEventListener("click",() => {
     page--
     getCharacters()
@@ -46,7 +46,7 @@ nextButton.addEventListener("click", () => {
 
 getCharacters()
 
-*/
+
 
 /*------> otro metodo
 
